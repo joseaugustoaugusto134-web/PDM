@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         Button btForm = findViewById(R.id.btFormulario);
+        Button btWebView = findViewById(R.id.btWebView);
+        Button btImageView = findViewById(R.id.btImageView);
         btForm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,5 +33,25 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(it);
             }
         });
+
+        btWebView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(getApplicationContext(), MainActivityWebView.class);
+                startActivity(it);
+            }
+        });
+
+        btImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(getApplicationContext(), MainActivityImageView.class);
+                startActivity(it);
+            }
+        });
+    }
+    public void onClickAbrirLista(View view) {
+        Intent it = new Intent(getApplicationContext(), MainActivityLista.class);
+        startActivity(it);
     }
 }

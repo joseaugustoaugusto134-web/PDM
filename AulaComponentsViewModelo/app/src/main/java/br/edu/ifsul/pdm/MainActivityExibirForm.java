@@ -28,14 +28,19 @@ public class MainActivityExibirForm extends AppCompatActivity {
         TextView tvEmail = findViewById(R.id.textView2);
         TextView tvTelefone = findViewById(R.id.textView3);
         TextView tvEndereco = findViewById(R.id.textView4);
+        TextView tvResultados = findViewById(R.id.textView5);
 
         Intent it = getIntent();
 
-        tvNome.setText(it.getStringExtra("nome"));
+        String nome = it.getStringExtra("nome");
+        String sexo = it.getStringExtra("sexo");
+        String estadoC = it.getStringExtra("estadoCivil");
+
+        tvNome.setText(nome);
         tvEmail.setText(it.getStringExtra("email"));
         tvTelefone.setText(it.getStringExtra("telefone"));
         tvEndereco.setText(it.getStringExtra("endereco"));
-
+        tvResultados.setText("Sexo: "+sexo+"\n"+"Estado Civil: "+estadoC);
 
 
     }

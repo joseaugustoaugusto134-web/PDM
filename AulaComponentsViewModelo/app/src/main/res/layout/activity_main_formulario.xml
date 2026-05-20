@@ -9,11 +9,9 @@
 
     <EditText
         android:id="@+id/etNome"
-        android:layout_width="0dp"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Informe o nome completo"
         android:inputType="text"
@@ -24,26 +22,22 @@
 
     <EditText
         android:id="@+id/etEmail"
-        android:layout_width="0dp"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
-        android:minHeight="48dp"
         android:hint="Informe o e-mail"
         android:inputType="textEmailAddress"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNome" />
 
     <EditText
         android:id="@+id/etTelefone"
-        android:layout_width="0dp"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Informe o telefone para contato"
         android:inputType="phone"
@@ -53,29 +47,64 @@
         app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
     <Button
-        android:id="@+id/btInfo"
+        android:id="@+id/btEnviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:minHeight="48dp"
         android:text="Enviar informações"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTelefone" />
+        app:layout_constraintTop_toBottomOf="@+id/etEndereco" />
 
     <EditText
         android:id="@+id/etEndereco"
-        android:layout_width="0dp"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Informe o endereço"
         android:inputType="textPostalAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etTelefone" />
+
+    <RadioGroup
+        android:id="@+id/rgSexo"
+        android:layout_width="170dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEndereco">
+
+        <RadioButton
+            android:id="@+id/rbPND"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prefiro não declarar" />
+
+        <RadioButton
+            android:id="@+id/rbF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Feminino" />
+
+        <RadioButton
+            android:id="@+id/rbM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masculino" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spnEstadoCivil"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgSexo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
